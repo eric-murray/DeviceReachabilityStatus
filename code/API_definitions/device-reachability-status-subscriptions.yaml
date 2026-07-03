@@ -911,7 +911,7 @@ components:
         config:
           subscriptionDetail:
             device:
-              phoneNumber: "+123456789
+              phoneNumber: "+123456789"
           subscriptionExpireTime: "2023-01-17T13:18:23.682Z"
           subscriptionMaxEvents: 5
           initialEvent: true
