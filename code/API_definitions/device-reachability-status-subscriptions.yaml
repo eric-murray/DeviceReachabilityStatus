@@ -10,13 +10,15 @@ info:
 
     # Relevant terms and definitions
 
-    * **Reachable**: A device is considered to be reachable if it has data connectivity, or can receive SMS messages.
+    * **Reachable**:\
+       A device is considered to be reachable if it has data connectivity, or can receive SMS messages.
 
-    * **Device**: A device refers to any physical entity that can connect to a network and participate in network communication.
+    * **Device**:\
+      A device refers to any physical entity that can connect to a network and participate in network communication.
 
-        At least one identifier for the device out of four options must be provided: IPv4 address, IPv6 address, Phone number, or Network Access Identifier assigned by the mobile network operator for the device. Where more than one device identifier is provided, only one identifier will be selected by the implementation and this choice indicated to the API consumer in the session creation response.
+      At least one identifier for the device out of four options must be provided: IPv4 address, IPv6 address, Phone number, or Network Access Identifier assigned by the mobile network operator for the device. Where more than one device identifier is provided, only one identifier will be selected by the implementation and this choice indicated to the API consumer in the session creation response.
 
-        Note: Network Access Identifier is defined for future use and will not be supported with this version of the API.
+      Note: Network Access Identifier is defined for future use and will not be supported with this version of the API.
 
     # API Functionality
 
@@ -51,7 +53,7 @@ info:
     If an event is triggered following `initialEvent` set to true,
     this event will be counted towards `subscriptionMaxEvents` (if provided).
 
-    **Clarification on `initialEvent` & `event-type` behaviour:**
+    **Clarification on `initialEvent` setting and event type behaviour:**
 
     Following table illustrate behaviour regarding event triggering depending on **initial** reachability state of the device:
 
