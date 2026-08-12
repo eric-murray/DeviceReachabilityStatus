@@ -13,6 +13,9 @@ info:
     * **Reachable**:\
        A device is considered to be reachable if it has data connectivity, or can receive SMS messages.
 
+    * **Connectivity:**\
+      Indicates the connectivity types (data, SMS, or both) by which the device is reachable from the network. A device is considered to be disconnected if it cannot be reached using either data or SMS connectivity.
+
     * **Device**:\
       A device refers to any physical entity that can connect to a network and participate in network communication.
 
