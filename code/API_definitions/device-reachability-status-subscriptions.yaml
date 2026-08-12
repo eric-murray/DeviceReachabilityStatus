@@ -30,11 +30,11 @@ info:
     When subscribing, it is mandatory to provide the event `types` you are subscribing to, as multiple subscription-types are managed by this API.
 
     Following event ``types`` are managed for this API:
-      - ``org.camaraproject.device-reachability-status-subscriptions.v0.reachability-data``: Event triggered when the device is connected to the network for Data usage (regardless of the SMS reachability).
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-data`: Event triggered when the device is connected to the network for Data usage (regardless of the SMS reachability).
 
-      - ``org.camaraproject.device-reachability-status-subscriptions.v0.reachability-sms``: Event triggered when the device is connected to the network only for SMS usage
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-sms`: Event triggered when the device is connected to the network only for SMS usage
 
-      - ``org.camaraproject.device-reachability-status-subscriptions.v0.reachability-disconnected``: Event triggered when the device is not connected.
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-disconnected`: Event triggered when the device is not connected.
 
     Note: Additionally, the following events could be sent, which do not require a dedicated subscription:
       - `org.camaraproject.device-reachability-status-subscriptions.v0.subscription-started` is sent when the subscription starts.
@@ -62,7 +62,7 @@ info:
     | reachability-data          | Device is connected for data and possibly SMS    | Yes                                    | The device is reachable using data            |
     | reachability-data          | Device is connected for SMS only                 | No                                     | The device is not reachable using data        |
     | reachability-data          | Device is disconnected from the network          | No                                     | The device is not reachable using data        |
-    | reachability-sms           | Device is connected for SMS and possibly data    | Yes                                    | The device is reachable using SMS             |
+    | reachability-sms           | Device is connected for SMS but not data         | Yes                                    | The device is reachable only using SMS        |
     | reachability-sms           | Device is connected for data only                | No                                     | The device is not reachable using SMS         |
     | reachability-sms           | Device is disconnected from the network          | No                                     | The device is not reachable using SMS         |
     | reachability-disconnected  | Device is disconnected from the network          | Yes                                    | The device is not reachable at all            |
@@ -71,7 +71,7 @@ info:
     ### Notifications callback
 
     This endpoint describes the format of the event notification received by the API consumer when an event is sent.
-    A detailed description of the event subscription and notification mechanism is provided in the CAMARA API Event Subscription and Notification Guide.
+    A detailed description of the event subscription and notification mechanism is provided in the `CAMARA API Event Subscription and Notification Guide`.
 
     _**WARNING**:\
       API consumers may optionally provide a callback URL on which reachability status notifications from the API provider can be received. This callback endpoint must be exposed by API consumer as `POST /{$request.body#/sink}`. When an event occurs, the API provider will send the event to the URI specified by `sink`._
