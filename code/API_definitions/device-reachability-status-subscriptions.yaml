@@ -70,12 +70,13 @@ info:
 
     ### Notifications callback
 
-    This endpoint describes the event notification received on subscription listener side when the event occurred.
-    As for subscription, detailed description of the event notification is provided in the CAMARA API design guideline document.
+    This endpoint describes the format of the event notification received by the API consumer when an event is sent.
+    A detailed description of the event subscription and notification mechanism is provided in the CAMARA API Event Subscription and Notification Guide.
 
-    _**WARNING**: This callback endpoint must be exposed on the consumer side as `POST /{$request.body#/sink}`.
-      Developers may provide a callback URL on which notifications regarding reachability-status can be received from the service provider.
-      If an event occurs the application will send events to the provided webhook - `sink`._
+    _**WARNING**:
+      API consumers may optionally provide a callback URL on which reachability status notifications from the API provider can be received.
+      This callback endpoint must be exposed by API consumer as `POST /{$request.body#/sink}`.
+      When an event occurs, the API provider will send the event to the URI specified by `sink`._
 
     <!-- CAMARA:MANDATORY:authorization-and-authentication:BEGIN -->
 
