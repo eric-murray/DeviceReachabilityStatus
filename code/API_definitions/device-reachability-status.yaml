@@ -30,9 +30,9 @@ info:
 
     The API exposes following capabilities:
 
-    ### Device Reachability situation
+    ### Device Reachability Status
 
-    The endpoint `POST /retrieve` allows to get current connectivity status information synchronously.
+    The endpoint `POST /retrieve` allows to get current reachability status information synchronously for a specific device
 
     <!-- CAMARA:MANDATORY:authorization-and-authentication:BEGIN -->
 
