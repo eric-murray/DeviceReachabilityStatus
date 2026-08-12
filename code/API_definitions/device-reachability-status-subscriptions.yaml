@@ -27,7 +27,7 @@ info:
 
     The API exposes following capability:
 
-    ## Device reachability status subscription
+    ## Device Reachability Status Subscription
 
     These endpoints allow the API consumer to manage event subscriptions for device reachability status events.
     The CAMARA subscription model is described in the `CAMARA API Event Subscription and Notification Guide` and uses notifications that follow the CloudEvents specification.
@@ -35,9 +35,9 @@ info:
     When creating a subscription, it is mandatory to provide the event types you are subscribing to, as multiple subscription-types are managed by this API.
 
     Following event types are managed for this API:
-      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-data`         : Event triggered when the device is connected to the network for Data usage (regardless of the SMS reachability)
-      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-sms`          : Event triggered when the device is connected to the network only for SMS usage
-      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-disconnected` : Event triggered when the device is not connected
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-data` is sent when the device becomes connected to the network for data usage (regardless of the SMS reachability status)
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-sms` is sent when the device becomes connected to the network for SMS usage (regardless of the data reachability status)
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-disconnected` is sent when the device becomes disconnected from the network
 
     Note: Additionally, the following events could be sent, which do not require a dedicated subscription:
       - `org.camaraproject.device-reachability-status-subscriptions.v0.subscription-started` is sent when the subscription starts.
