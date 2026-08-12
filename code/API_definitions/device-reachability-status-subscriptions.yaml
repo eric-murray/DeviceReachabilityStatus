@@ -6,11 +6,11 @@ info:
 
     # Introduction
 
-    ## Reachability Status
-    API consumer is able to be notified whether the reachability status of a certain user device has changed to either data- or sms-usage.
-    This capability is provided via a subscription  request - in this case the reachability situation is part of the event notification, which is sent back to the event subscriber when reachability situation has changed.
+    The API consumer is able to be notified whenever the reachability status of a certain user device has changed for either data or SMS connectivity. This capability is requested via a subscription request - in this case the reachability status is not contained in the API response, but instead an event notification is sent back to the event subscriber whenever the reachability situation changes.
 
     # Relevant terms and definitions
+
+    * **Reachable**: A device is considered to be reachable if it has data connectivity, or can receive SMS messages.
 
     * **Device**: A device refers to any physical entity that can connect to a network and participate in network communication.
 
@@ -24,17 +24,15 @@ info:
 
     ## Device reachability status subscription
 
-    These endpoints allow to manage event subscription on reachability device status event.
-    The CAMARA subscription model is detailed in the CAMARA API design guideline document and follows CloudEvents specification.
+    These endpoints allow the API consumer to manage event subscriptions for device reachability status events.
+    The CAMARA subscription model is described in the `CAMARA API Event Subscription and Notification Guide` and uses notifications that follow the CloudEvents specification.
 
-    When subscribing, it is mandatory to provide the event `types` you are subscribing to, as multiple subscription-types are managed by this API.
+    When creating a subscription, it is mandatory to provide the event types you are subscribing to, as multiple subscription-types are managed by this API.
 
-    Following event ``types`` are managed for this API:
-      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-data`: Event triggered when the device is connected to the network for Data usage (regardless of the SMS reachability).
-
-      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-sms`: Event triggered when the device is connected to the network only for SMS usage
-
-      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-disconnected`: Event triggered when the device is not connected.
+    Following event types are managed for this API:
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-data`         : Event triggered when the device is connected to the network for Data usage (regardless of the SMS reachability)
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-sms`          : Event triggered when the device is connected to the network only for SMS usage
+      - `org.camaraproject.device-reachability-status-subscriptions.v0.reachability-disconnected` : Event triggered when the device is not connected
 
     Note: Additionally, the following events could be sent, which do not require a dedicated subscription:
       - `org.camaraproject.device-reachability-status-subscriptions.v0.subscription-started` is sent when the subscription starts.
