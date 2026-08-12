@@ -10,18 +10,18 @@ info:
 
     ## Relevant terms and definitions
 
+    * **Reachable**:\
+       A device is considered to be reachable if it has data connectivity, or can receive SMS messages.
+
+    * **Connectivity:**\
+      Indicates the connectivity types (data, SMS, or both) by which the device is reachable from the network.
+
     * **Device**:\
       A device refers to any physical entity that can connect to a network and participate in network communication.
 
       At least one identifier for the device (user equipment) out of four options must be provided: IPv4 address, IPv6 address, Phone number, or Network Access Identifier assigned by the mobile network operator for the device. Where more than one device identifier is provided, only one identifier will be selected by the implementation and this choice indicated to the API consumer in the session creation response.
 
       Note: Network Access Identifier is defined for future use and will not be supported with this version of the API.
-
-    * **Reachable:**\
-      Indicates, if the device is reachable from the network or not.
-
-    * **Connectivity:**\
-      Indicates the connectivity types (DATA, SMS or both) through which the device is reachable from the network.
 
     * **Last Status Time**:\
       The time when the device reachability status was last confirmed to be correct. An older status is more likely to now be incorrect.
