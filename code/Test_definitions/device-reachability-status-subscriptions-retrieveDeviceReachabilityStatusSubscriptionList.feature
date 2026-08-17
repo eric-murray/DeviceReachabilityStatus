@@ -57,7 +57,7 @@ Feature: Device Reachability Status Subscriptions API, vwip - Operation retrieve
 
   @reachability_status_subscriptions_03_operation_to_retrieve_list_of_subscriptions_when_no_records
   Scenario: Check no existing subscription is retrieved in list
-    Given an API consumer that has created no roaming status subscriptions
+    Given an API consumer that has created no reachability status subscriptions
     When the request "retrieveDeviceReachabilityStatusSubscriptionList" is sent
     Then the response code is 200
     And the response header "Content-Type" is "application/json"
