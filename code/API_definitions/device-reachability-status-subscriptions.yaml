@@ -407,7 +407,7 @@ components:
         device:
           $ref: "../common/CAMARA_common.yaml#/components/schemas/Device"
 
-    ConfigLocal:
+    Config:
       description: Config schema allowing for device to be specified as part of subscription detail
       allOf:
         - $ref: "../common/CAMARA_event_common.yaml#/components/schemas/ConfigBase"
